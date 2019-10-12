@@ -9,10 +9,26 @@
 
 <div class="row text-white">
   <div class="col-3 bg-info p-2">
-    Categories {{categories.length}}
+    <button class="btn btn-block btn-outline-dark" (click)="changeCategory()">HOME</button>
+
+    <button *ngFor="let cat of categories"
+            class="btn btn-outline-dark btn-block"
+            [class.active]="cat==selectedCategory" (click)="changeCategory(cat)">
+      {{cat}}
+    </button>
   </div>
   <div class="col-9 bg-success p-2">
-    Products {{products.length}}
+    <div *ngFor="let product of products" class="card m-1 p-1 bg-dark">
+      <h4>
+        {{product.name}}
+        <span class="badge badge-pill badge-danger badge-primary float-right">
+          {{product.price | currency: "LE" : "symbol" : "2.2-2"}}
+        </span>
+      </h4>
+      <div class="card-text bg-dark p-1">
+        {{product.description}}
+      </div>
+    </div>
   </div>
 </div>
 
