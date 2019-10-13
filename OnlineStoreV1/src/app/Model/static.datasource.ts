@@ -5,11 +5,12 @@ import {Product} from './product';
 @Injectable()
 export class StaticDataSource {
   private products: Product[] = [
-    new Product(1, 'Grocery Chains', 'Category 1', 'Sneaker Shoe (Category 1)', 100),
-    new Product(2, 'T-shirt', 'Category 1', 'Sport T-shirt Hight Quality (Category 1)', 90),
-    new Product(3, 'Computers', 'Category 1', 'Dell (Category 1)', 80),
-    new Product(4, 'Graphic T-shirt Grey L', 'Category 1', 'Cotton T-shirt Hight Quality (Category 1)', 70),
-    new Product(4, 'Watch', 'Category 2', 'CR7 (Category2)', 250)
+    new Product(1, 'HTML5 by Emmanuel', 'Programming Books', 'Learn programming in 25 days', 100000),
+    new Product(2, 'CODE in 5 Days by Pablo', 'Programming Books', 'Best book to learn Angular', 90000),
+    new Product(3, 'AI and The Future by Augustine', 'Artificial Intelligence Books', 'Artificial Intelligence for all', 80000),
+    new Product(4, 'Data Science for Beginners by Alberto', 'Data Science Books', 'Data Science', 70000),
+    new Product(5, 'Software Engineering by Daniel', 'Data Science Books', 'Software Engineering Books', 250000),
+    new Product(6, 'Photoshop for everyone by Lukeman', 'Graphics', 'Graphics Design Books', 300000),
   ];
 
   getProducts(): Observable<Product[]> {

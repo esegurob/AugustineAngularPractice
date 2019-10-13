@@ -29,6 +29,15 @@
         {{product.description}}
       </div>
     </div>
+
+    <div class="form-inline float-left mr-1">
+      <select class="form-control" [value]="productsPerPage"
+              (change)="changePageSize($event.target.value)">
+        <option value="4">Four Products Per Page</option>
+        <option value="6">Six Products Per Page</option>
+        <option value="8">Eight Products Per Page</option>
+      </select>
+  </div>
   </div>
 </div>
 
