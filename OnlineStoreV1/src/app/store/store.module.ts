@@ -6,7 +6,8 @@ import {NgModule} from '@angular/core';
 import {CartsummaryComponent} from '../cartsummary/cartsummary.component';
 import {CartDetailsComponent} from '../cart-details/cart-details.component';
 import {CheckoutComponent} from '../checkout/checkout.component';
-import {RouterModule} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
+
 
 @NgModule({
   imports: [
